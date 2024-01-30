@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 7</title>
+    <style>
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .animated-text {
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+        }
+    </style>
+</head>
+<body>
+    <div class="animated-text" id="textToAnimate">
+        This is the animated text!
+    </div>
+
+    <div id="myModal">
+        <img src="images/image1.jpg" alt="Popup Image">
+    </div>
+
+    <button onclick="openPopup()">Open Pop-up Window</button>
+
+    <script>
+        function openPopup() {
+            // Specify the URL and other options for the new window
+            var popup = window.open('', '_blank', 'width=800,height=600');
+            popup.document.write('<h1>Interactive Content</h1><p>Your content here.</p>');
+            popup.focus();
+        }
+    </script>
+</body>
+</html>
